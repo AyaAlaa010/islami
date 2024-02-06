@@ -6,10 +6,26 @@ class HadethView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Center(
-      child: Container(
-        child: Text("Hadeth",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),textAlign: TextAlign.center,),
-      ),
+    var mediaQuery=MediaQuery.of(context).size;
+    var theme=Theme.of(context);
+
+    return  Column(
+      children: [
+        Image.asset("assets/images/hadeth_header.png",height: mediaQuery.height*0.2,),
+        const Divider(),
+       Text("الأحاديث",style: theme.textTheme.bodyLarge,),
+        const Divider(),
+        Expanded(child: ListView.builder(itemBuilder: (context,index){
+
+          return Text(" الحديث الأول ", style: theme.textTheme.bodyMedium,textAlign: TextAlign.center,);
+
+        },itemCount: 40,))
+
+
+
+
+      ],
+
     );
   }
 }

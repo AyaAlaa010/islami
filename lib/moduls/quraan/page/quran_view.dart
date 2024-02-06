@@ -17,11 +17,11 @@ class QuranView extends StatelessWidget {
         Row(
           children: [
             Expanded(
-              child:Text("الفاتحه",style: theme.textTheme.bodyLarge,textAlign: TextAlign.center,) ,
+              child:Text("رقم السوره",style: theme.textTheme.bodyLarge,textAlign: TextAlign.center,) ,
             ),
             Container(color:theme.primaryColor ,height: 38,width: 1.5,),
             Expanded(
-              child:Text("1",style: theme.textTheme.bodyLarge,textAlign: TextAlign.center,) ,
+              child:Text("اسم الصوره",style: theme.textTheme.bodyLarge,textAlign: TextAlign.center,) ,
             ),
           ],
 
