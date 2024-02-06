@@ -24,6 +24,10 @@ class HadethView extends StatelessWidget {
 
 
 
+
+
+
+
       ],
 
     );
