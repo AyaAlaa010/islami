@@ -49,7 +49,13 @@ class _TasbihViewState extends State<TasbihView>   with SingleTickerProviderStat
                     children: [
                       RotationTransition(
                         turns: Tween(begin: 0.0, end: 1.0).animate(_controller),
-                        child:Image.asset("assets/images/body_of _seb7a.png",),),
+                        child:InkWell(
+                            onTap: (){
+                              setState(() {
+                                makeRotate();
+                              });
+                            },
+                            child: Image.asset("assets/images/body_of _seb7a.png",)),),
                       SizedBox(height: 30,),
                       Text("عدد التسبيحات",style: theme.textTheme.bodyLarge,),
 
@@ -73,25 +79,11 @@ class _TasbihViewState extends State<TasbihView>   with SingleTickerProviderStat
             ),
            const SizedBox(height: 30,),
             TextButton(onPressed: (){
-              _controller.forward(from: 0.0); // it starts the animation
 
-              if(count<33){
-                count++;
-                //_controller.forward();
-              }else {
-                if(tasbihIndex<tasbihWords.length-1){
-                  //_controller.reset();
-                  count=0;
-                  tasbihIndex++;
-                }else{
-                 // _controller.reset();
-                  tasbihIndex=0;
-                  count=0;
-                }
-
-              }
               setState(() {
+                makeRotate();
               });
+
               }, child: Text("${tasbihWords[tasbihIndex]}",
               style: theme.textTheme.bodyMedium!.copyWith(color: Colors.white),
               textAlign: TextAlign.center,),
@@ -103,5 +95,28 @@ class _TasbihViewState extends State<TasbihView>   with SingleTickerProviderStat
         ),
       ),
     );
+  }
+
+  void makeRotate(){
+
+    _controller.forward(from: 0.0); // it starts the animation
+
+    if(count<33){
+      count++;
+      //_controller.forward();
+    }else {
+      if(tasbihIndex<tasbihWords.length-1){
+        //_controller.reset();
+        count=0;
+        tasbihIndex++;
+      }else{
+        // _controller.reset();
+        tasbihIndex=0;
+        count=0;
+      }
+
+    }
+    setState(() {
+    });
   }
 }
