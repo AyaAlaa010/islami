@@ -49,7 +49,7 @@ class _LayoutViewState extends State<LayoutView> {
                          });
           },
           items: [
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/quran_icn.png")) ,label: "القرأن"),
+            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/quran_icn.png")) ,label: "القرآن"),
             BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/hadeth_icn.png")) ,label: "الأحاديث"),
             BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/sebha_icn.png")) ,label: "التسبيح"),
             BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/radio_icn.png")) ,label: "الراديو"),
