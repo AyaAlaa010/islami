@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:islami/moduls/hadith/page/hadeth_view.dart';
+import 'package:islami/moduls/hadeth/page/hadeth_view.dart';
 import 'package:islami/moduls/quraan/page/quran_view.dart';
 import 'package:islami/moduls/radio/page/radio_view.dart';
 import 'package:islami/moduls/settings/page/settings_view.dart';
@@ -26,9 +26,7 @@ class _LayoutViewState extends State<LayoutView> {
 
   @override
   Widget build(BuildContext context) {
-
     var mediaQuery=MediaQuery.of(context).size;
-
 
     return Container(
       decoration: BoxDecoration(
@@ -51,11 +49,11 @@ class _LayoutViewState extends State<LayoutView> {
                          });
           },
           items: [
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/quran_icn.png")) ,label: "Quran"),
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/hadeth_icn.png")) ,label: "Hadeth"),
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/sebha_icn.png")) ,label: "Tasbih"),
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/radio_icn.png")) ,label: "Radio"),
-            BottomNavigationBarItem(icon:Icon(Icons.settings) ,label: "Settings"),
+            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/quran_icn.png")) ,label: "القرأن"),
+            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/hadeth_icn.png")) ,label: "الأحاديث"),
+            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/sebha_icn.png")) ,label: "التسبيح"),
+            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/radio_icn.png")) ,label: "الراديو"),
+            BottomNavigationBarItem(icon:Icon(Icons.settings) ,label: "الاعدادات"),
 
           ],
 

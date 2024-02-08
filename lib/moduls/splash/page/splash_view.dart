@@ -22,6 +22,7 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     Timer(const Duration(seconds: 2), () {
+
       Navigator.pushReplacementNamed(context,LayoutView.routeName);
     });
 
@@ -31,7 +32,8 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     var mediaQuery=MediaQuery.of(context).size;
     return Scaffold(
-      body: Image.asset("assets/images/splash_bg.png",width: mediaQuery.width,height: mediaQuery.height,fit: BoxFit.cover,),
+      body:
+      Image.asset("assets/images/splash_bg.png",width: mediaQuery.width,height: mediaQuery.height,fit: BoxFit.cover,),
     );
 
 

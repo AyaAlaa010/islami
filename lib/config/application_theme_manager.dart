@@ -18,8 +18,8 @@ static const Color darkTextColor=Color(0XFF242424);
     textTheme: TextTheme(
       titleLarge: TextStyle(fontSize: 30,fontWeight: FontWeight.w700,fontFamily: "ElMessiri",color: darkTextColor),
       bodyLarge: TextStyle(fontSize: 25,fontFamily: "ElMessiri",fontWeight: FontWeight.w600,color: darkTextColor),
-      bodyMedium: TextStyle(fontSize: 25,fontFamily: "ElMessiri",fontWeight: FontWeight.w400,color: darkTextColor),
-        bodySmall: TextStyle(fontSize: 20,fontFamily: "ElMessiri",fontWeight: FontWeight.w400,color: darkTextColor)
+      bodyMedium: TextStyle(fontSize: 25,fontFamily: "Inter",fontWeight: FontWeight.w400,color: darkTextColor),
+        bodySmall: TextStyle(fontSize: 20,fontFamily: "Inter",fontWeight: FontWeight.w400,color: darkTextColor)
 
 
     ),
