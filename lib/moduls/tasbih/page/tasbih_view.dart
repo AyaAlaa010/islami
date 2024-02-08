@@ -79,7 +79,6 @@ class _TasbihViewState extends State<TasbihView>   with SingleTickerProviderStat
             ),
            const SizedBox(height: 30,),
             TextButton(onPressed: (){
-
               setState(() {
                 makeRotate();
               });
