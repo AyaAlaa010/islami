@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:islami/config/settings_provider.dart';
 import 'package:islami/moduls/hadeth/page/hadeth_view.dart';
 import 'package:islami/moduls/quraan/page/quran_view.dart';
 import 'package:islami/moduls/radio/page/radio_view.dart';
 import 'package:islami/moduls/settings/page/settings_view.dart';
 import 'package:islami/moduls/tasbih/page/tasbih_view.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 class LayoutView extends StatefulWidget {
   static const String routeName="LayoutView";
@@ -29,11 +31,12 @@ class _LayoutViewState extends State<LayoutView> {
   Widget build(BuildContext context) {
     var mediaQuery=MediaQuery.of(context).size;
     var locale=AppLocalizations.of(context)!;
+    var provider=Provider.of<SettingsProvider>(context);
 
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: Image.asset("assets/images/main_background.png",fit:BoxFit.cover ,width: mediaQuery.width,
+          image: Image.asset(provider.getBackGround(),fit:BoxFit.cover ,width: mediaQuery.width,
             height: mediaQuery.height,).image
         )
       ),

@@ -80,7 +80,7 @@ static const Color darkTextColor=Color(0XFF242424);
           backgroundColor: Colors.transparent,
           iconTheme: IconThemeData(color: onPrimarydarkColor),
           centerTitle: true,
-          titleTextStyle: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: onPrimarydarkColor,fontFamily: "ElMessiri")
+          titleTextStyle: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white,fontFamily: "ElMessiri")
 
       ),
       //Navigation

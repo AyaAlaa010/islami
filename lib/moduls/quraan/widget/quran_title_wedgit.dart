@@ -12,7 +12,7 @@ class QuranTitleWidget extends StatelessWidget {
     return Row(
       children: [
         Expanded(child: Text("$suraNumber",style: theme.textTheme.bodyMedium,textAlign: TextAlign.center,)),
-        Container( height: 38,width: 1.5,color:theme.primaryColor ,),
+        Container( height: 38,width: 1.5,child: VerticalDivider() ,),
         Expanded(child: Text(suraName,style: theme.textTheme.bodyMedium,textAlign: TextAlign.center,)),
 
       ],

@@ -29,7 +29,7 @@ class QuranView extends StatelessWidget {
             Expanded(
               child:Text("رقم السوره",style: theme.textTheme.bodyLarge,textAlign: TextAlign.center,) ,
             ),
-            Container(color:theme.primaryColor ,height: 38,width: 1.5,),
+            Container(child: VerticalDivider() ,height: 38,width: 1.5,),
             Expanded(
               child:Text("اسم الصوره",style: theme.textTheme.bodyLarge,textAlign: TextAlign.center,) ,
             ),

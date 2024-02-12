@@ -19,6 +19,10 @@ class SettingsProvider extends ChangeNotifier{
     notifyListeners();
  }
 
-
-
+  getBackGround(){
+    if(currentThemeMode==ThemeMode.light) return "assets/images/main_background.png";
+    else
+      if(currentThemeMode==ThemeMode.dark) return "assets/images/main_background_dark.png";
+ }
+  isDark()=>currentThemeMode==ThemeMode.dark;
 }

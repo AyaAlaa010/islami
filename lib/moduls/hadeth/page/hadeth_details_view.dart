@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:islami/config/settings_provider.dart';
 import 'package:islami/moduls/hadeth/page/hadeth_view.dart';
+import 'package:provider/provider.dart';
 
 class HadethDetailsView extends StatelessWidget {
   static String routeName="HadethDetailsView";
@@ -9,6 +11,7 @@ class HadethDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var args=ModalRoute.of(context)?.settings.arguments as HadethDetails;
+    var provider=Provider.of<SettingsProvider>(context)!;
 
     var mediaQuery=MediaQuery.of(context).size;
     var theme=Theme.of(context);
@@ -16,7 +19,7 @@ class HadethDetailsView extends StatelessWidget {
 
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: Image.asset("assets/images/main_background.png",height: mediaQuery.height, width: mediaQuery.width,fit: BoxFit.cover,).image
+          image: Image.asset(provider.getBackGround(),height: mediaQuery.height, width: mediaQuery.width,fit: BoxFit.cover,).image
         )
       ),child: Scaffold(
       appBar: AppBar(title: Text("إسلامي",style:theme.textTheme.titleLarge ,),),
