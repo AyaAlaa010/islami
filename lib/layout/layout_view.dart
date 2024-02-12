@@ -5,6 +5,7 @@ import 'package:islami/moduls/quraan/page/quran_view.dart';
 import 'package:islami/moduls/radio/page/radio_view.dart';
 import 'package:islami/moduls/settings/page/settings_view.dart';
 import 'package:islami/moduls/tasbih/page/tasbih_view.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LayoutView extends StatefulWidget {
   static const String routeName="LayoutView";
@@ -27,6 +28,7 @@ class _LayoutViewState extends State<LayoutView> {
   @override
   Widget build(BuildContext context) {
     var mediaQuery=MediaQuery.of(context).size;
+    var locale=AppLocalizations.of(context)!;
 
     return Container(
       decoration: BoxDecoration(
@@ -37,7 +39,7 @@ class _LayoutViewState extends State<LayoutView> {
       ),
       child: Scaffold(
         appBar: AppBar(
-          title: Text("إسلامي"),
+          title: Text(locale.islami,),
         ),
         body: screens[currentIndex],
 
@@ -49,11 +51,11 @@ class _LayoutViewState extends State<LayoutView> {
                          });
           },
           items: [
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/quran_icn.png")) ,label: "القرآن"),
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/hadeth_icn.png")) ,label: "الأحاديث"),
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/sebha_icn.png")) ,label: "التسبيح"),
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/radio_icn.png")) ,label: "الراديو"),
-            BottomNavigationBarItem(icon:Icon(Icons.settings) ,label: "الاعدادات"),
+            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/quran_icn.png")) ,label: locale.quran),
+            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/hadeth_icn.png")) ,label: locale.hadeth),
+            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/sebha_icn.png")) ,label: locale.tasbih),
+            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/images/radio_icn.png")) ,label: locale.radio),
+            BottomNavigationBarItem(icon:Icon(Icons.settings) ,label: locale.settings),
 
           ],
 

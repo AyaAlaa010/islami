@@ -121,17 +121,13 @@ class _TasbihViewState extends State<TasbihView>
 
   void makeRotate() {
     _controller.forward(from: 0.0); // it starts the animation
-
     if (count < 33) {
       count++;
-      //_controller.forward();
     } else {
       if (tasbihIndex < tasbihWords.length - 1) {
-        //_controller.reset();
         count = 0;
         tasbihIndex++;
       } else {
-        // _controller.reset();
         tasbihIndex = 0;
         count = 0;
       }

@@ -1,0 +1,3 @@
+arb-dir: lib/l10n #the path for the translation (I should create this directory)
+template-arb-file: app_en.arb #the default file for the word that does not have translation ( we will create this file)
+output-localization-file: app_localizations.dart #compiler will create this file
