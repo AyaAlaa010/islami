@@ -72,7 +72,7 @@ static const Color darkTextColor=Color(0XFF242424);
           titleLarge:  TextStyle(fontSize: 30,fontWeight: FontWeight.w700,fontFamily: "ElMessiri",color: Colors.white),
           bodyLarge: TextStyle(fontSize: 25,fontFamily: "ElMessiri",fontWeight: FontWeight.w600,color: Colors.white),
           bodyMedium: TextStyle(fontSize: 25,fontFamily: "Inter",fontWeight: FontWeight.w400,color: Colors.white),
-          bodySmall: TextStyle(fontSize: 20,fontFamily: "Inter",fontWeight: FontWeight.w400,color: Colors.white)
+          bodySmall: TextStyle(fontSize: 20,fontFamily: "Inter",fontWeight: FontWeight.w400,color: onPrimarydarkColor)
       ),
 
       //AppBar

@@ -43,7 +43,7 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
           height: mediaQuery.height,
           width: mediaQuery.width,
           decoration: BoxDecoration(
-              color: const Color(0XFFF8F8F8).withOpacity(.8),
+              color:provider.isDark()? const Color(0XFF141A2E).withOpacity(.8): const Color(0XFFF8F8F8).withOpacity(.8),
               borderRadius: BorderRadius.circular(10)),
           margin:const  EdgeInsetsDirectional.only(
               start: 20, end: 20, top: 15, bottom: 60),
@@ -54,15 +54,15 @@ class _QuranDetailsViewState extends State<QuranDetailsView> {
                 children: [
                   Text(
                     " سورة ${args.suraName}  ",
-                    style: theme.textTheme.bodyMedium,
+                    style:provider.isDark()?theme.textTheme.bodyMedium!.copyWith(color: Color(0XFFFACC1D)) : theme.textTheme.bodyMedium,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(
                     width: 10,
                   ),
-                  const Icon(
+                   Icon(
                     Icons.play_circle_rounded,
-                    size: 28,
+                    size: 28,color:provider.isDark() ? Color(0XFFFACC1D) :Colors.black ,
                   )
                 ],
               ),

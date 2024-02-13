@@ -12,11 +12,9 @@ class HadethDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     var args=ModalRoute.of(context)?.settings.arguments as HadethDetails;
     var provider=Provider.of<SettingsProvider>(context)!;
-
     var mediaQuery=MediaQuery.of(context).size;
     var theme=Theme.of(context);
     return  Container(
-
       decoration: BoxDecoration(
         image: DecorationImage(
           image: Image.asset(provider.getBackGround(),height: mediaQuery.height, width: mediaQuery.width,fit: BoxFit.cover,).image
@@ -29,11 +27,12 @@ class HadethDetailsView extends StatelessWidget {
         margin: EdgeInsetsDirectional.only(start: 20,end:20,top: 15,bottom: 60),
         padding: EdgeInsetsDirectional.symmetric(horizontal: 15,vertical: 20),
         decoration: BoxDecoration(
-            color: const Color(0XFFF8F8F8).withOpacity(.8),
+            color:provider.isDark()? const Color(0XFF141A2E).withOpacity(.8): const Color(0XFFF8F8F8).withOpacity(.8),
             borderRadius: BorderRadius.circular(10)),
         child: Column(
           children: [
-            Text("${args.hadethTitle}",style: theme.textTheme.bodyMedium,),
+            Text("${args.hadethTitle}",
+              style:provider.isDark()?theme.textTheme.bodyMedium!.copyWith(color: Color(0XFFFACC1D)) : theme.textTheme.bodyMedium,),
             const Divider(indent: 30,endIndent: 30,),
             Expanded(
               child: SingleChildScrollView(
