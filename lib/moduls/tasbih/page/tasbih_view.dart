@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../../config/settings_provider.dart';
 
 class TasbihView extends StatefulWidget {
   TasbihView({super.key});
@@ -8,8 +11,7 @@ class TasbihView extends StatefulWidget {
   State<TasbihView> createState() => _TasbihViewState();
 }
 
-class _TasbihViewState extends State<TasbihView>
-    with SingleTickerProviderStateMixin {
+class _TasbihViewState extends State<TasbihView> with SingleTickerProviderStateMixin {
   List<String> tasbihWords = [
     "سبحان الله ",
     "الحمد لله ",
@@ -19,6 +21,7 @@ class _TasbihViewState extends State<TasbihView>
   static int tasbihIndex = 0;
   static int count = 0;
   late AnimationController _controller;
+
 
   @override
   void initState() {
@@ -39,7 +42,7 @@ class _TasbihViewState extends State<TasbihView>
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
-    var mediaQuery = MediaQuery.of(context).size;
+    var provider=Provider.of<SettingsProvider>(context)!;
 
     return Center(
       child: SingleChildScrollView(
@@ -62,7 +65,8 @@ class _TasbihViewState extends State<TasbihView>
                               });
                             },
                             child: Image.asset(
-                              "assets/images/body_of _seb7a.png",
+                              provider.isDark()? "assets/images/body_of_dark_seb7a.png" :
+                              "assets/images/body_of_seb7a.png"
                             )),
                       ),
                       SizedBox(
@@ -75,7 +79,7 @@ class _TasbihViewState extends State<TasbihView>
                     ],
                   ),
                 ),
-                Image.asset("assets/images/head_of_seb7a.png"),
+                Image.asset( provider.isDark()?"assets/images/head_of_dark_seb7a.png":"assets/images/head_of_seb7a.png"),
               ],
             ),
             SizedBox(
@@ -86,12 +90,12 @@ class _TasbihViewState extends State<TasbihView>
                 height: 60,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: const Color(0XFFB7935F).withOpacity(0.57) //#B7935F
+                    color:provider.isDark()?const Color(0XFF141A2E).withOpacity(0.8): const Color(0XFFB7935F).withOpacity(0.57) //#B7935F
                     ),
                 child: Center(
                     child: Text(
                   "$count",
-                  style: theme.textTheme.bodyMedium,
+                  style:  provider.isDark()?  theme.textTheme.bodyMedium!.copyWith(color: Colors.white):theme.textTheme.bodyMedium!,
                 ))),
             const SizedBox(
               height: 30,
@@ -104,12 +108,11 @@ class _TasbihViewState extends State<TasbihView>
               },
               child: Text(
                 "${tasbihWords[tasbihIndex]}",
-                style:
-                    theme.textTheme.bodyMedium!.copyWith(color: Colors.white),
+                style: provider.isDark()? theme.textTheme.bodyMedium!.copyWith(color: Color(0XFF0F1424)): theme.textTheme.bodyMedium!.copyWith(color:Colors.white),
                 textAlign: TextAlign.center,
               ),
               style: TextButton.styleFrom(
-                  backgroundColor: Color(0XFFB7935F),
+                  backgroundColor:provider.isDark()?  Color(0XFFFACC1D): Color(0XFFB7935F),
                   padding: EdgeInsetsDirectional.symmetric(
                       horizontal: 8, vertical: 3)),
             )
