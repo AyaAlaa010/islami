@@ -1,16 +1,22 @@
-# islami
+Islami Application is developed using flutter 
 
-A new Flutter project.
+Islami Consitst of five parts :
+Quran-> you can explore all quran 
+Ahadeth -> it contains large number of Ahdeth  
+Sebha -> you can use sebha to count the tasabih
+Radio  -> (coming feature ) you will go directly to the Quran Radio
+Settings ->  in the settings you can change the language from english to arabic or the obsite and change from light mode to dark mode
+ 
+Tools:
+Localization -> The Application exists with Arabic and English Language
+Themes -> you can change the light theme to dark them with different style
+StateMangement-> Provider
+Read data from Files
+SplashScreen 
+MaterialDesign
 
-## Getting Started
+Resources:
+https://pub.dev/
+https://docs.flutter.dev/
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
