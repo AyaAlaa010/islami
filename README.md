@@ -1,36 +1,36 @@
-- Islami Application is developed using flutter 
+ Islami Application is developed using flutter 
 
-- Islami Consists of five parts :
+ Islami Consists of five parts :
 
-Quran-> you can explore all quran 
+  Quran-> you can explore all quran 
 
-Ahadeth -> it contains large number of Ahdeth  
+  Ahadeth -> it contains large number of Ahdeth  
 
-Sebha -> you can use sebha to count the tasabih
+  Sebha -> you can use sebha to count the tasabih
 
-Radio  -> (coming feature ) you will go directly to the Quran Radio
+  Radio  -> (coming feature ) you will go directly to the Quran Radio
 
-Settings ->  in the settings you can change the language from english to arabic or the obsite and change from light mode to dark mode
+  Settings ->  in the settings you can change the language from english to arabic or the obsite and change from light mode to dark mode
  
-- Tools:
+Tools:
 
-Localization -> The Application exists with Arabic and English Language
+  Localization -> The Application exists with Arabic and English Language
 
-Themes -> you can change the light theme to dark them with different style
+  Themes -> you can change the light theme to dark them with different style
 
-StateMangement-> Provider
+  StateMangement-> Provider
 
-Read data from Files
+  Read data from Files
 
-SplashScreen 
+  SplashScreen 
 
-MaterialDesign
+  MaterialDesign
 
 
-- Resources:
+ Resources:
 
-- https://pub.dev/
+  - https://pub.dev/
 
-- https://docs.flutter.dev/
+  - https://docs.flutter.dev/
 
 
