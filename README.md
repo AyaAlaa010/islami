@@ -1,6 +1,6 @@
 Islami Application is developed using flutter 
 
-Islami Consitst of five parts :
+Islami Consists of five parts :
 
 Quran-> you can explore all quran 
 
