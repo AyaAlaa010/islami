@@ -4,16 +4,14 @@ import 'package:islami/config/settings_provider.dart';
 import 'package:islami/layout/layout_view.dart';
 import 'package:islami/moduls/hadeth/page/hadeth_details_view.dart';
 import 'package:islami/moduls/quraan/page/quran_details_view.dart';
-import 'package:islami/moduls/quraan/widget/quran_title_wedgit.dart';
 import 'package:islami/moduls/splash/page/splash_view.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(
   ChangeNotifierProvider(
-    create: (context)=>SettingsProvider(),
+    create: (context)=>SettingsProvider()..getLanguage()..getThemeMode(),
      child: const MyApplication())
   );
 }
@@ -27,8 +25,8 @@ class MyApplication extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: [
-        Locale('en'), // English
+      supportedLocales:const [
+         Locale('en'), // English
         Locale('ar'), // Arabic
       ],locale:Locale(provider.currentLanguage),//select the language
        initialRoute:SplashView.routeName ,
